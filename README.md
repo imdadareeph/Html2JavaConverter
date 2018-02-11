@@ -1,37 +1,50 @@
-## Welcome to GitHub Pages
+## Welcome to html2javaconverter GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/imdadareeph/Html2JavaConverter/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+view the following file (https://github.com/imdadareeph/Html2JavaConverter/edit/master/README.md) to know more.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
 ### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+below is a sample code : 
 
 ```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
+if(E.nodeName().equals("#text")){
+        	String text=E.attr("text").replace(" ", "");
+        	if(text.isEmpty() ||text.contains("\r\n")){
+        		String text2=text.replaceAll("\r\n", "");
+        		if(text2.length()>0){
+        			System.out.println(s1+ "writer.write(\""+ text2+ "\");");
+        		}else{
+        			
+        		}
+        		return;
+        	}else{
+        		System.out.println(s1+ "writer.write(\""+ E.attr("text")+ "\");");
+        	}
+        	
+        }
+        
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
 ```
+```markdown
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+# Change the file name in below code
 
-### Jekyll Themes
+File input=new File("/Users/imdadareeph/Documents/dev/eclipse/workspaces/multi/html2java/src/com/test/htmlfile.html");
+		try {
+			org.jsoup.nodes.Document document=Jsoup.parse(input, "UTF-8", "http://example.com");
+			Html2JavaConverter.callThis(document.getAllElements().get(0), " ", "  ");
+			
+		} catch (IOException e) {
+			
+			e.printStackTrace();
+		}
+    
+## and run Html2JavaConverter.java file
+### Remember to put your html code thhat you want to convert to java in the .html file
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/imdadareeph/Html2JavaConverter/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
 ### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+email at imdadareeph@gmail.com for more info
